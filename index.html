@@ -66,7 +66,7 @@
             //
             ARnft.init(width, height, [["cartel-vr/nft/godeidos"]], [["godeidos"]], "config.json", false)
                 .then((nft) => {
-                    let luz=new THREE.AmbientLight(0xFFFFFF,10)
+                    let luz=new THREE.AmbientLight(0xFFFFFF,6)
                     document.addEventListener("containerEvent", function (ev) {
                         let canvas = document.getElementById("canvas");
                         let fov = (0.8 * 180) / Math.PI;
@@ -105,7 +105,7 @@
                         //    ATENCIÓN: CAMBIAR LA ESCALA (3er parámetro, 200) AL VALOR QUE SE REQUIERA 
                         //
                         // Set object in scene, nft to find, scale, plane to draw video on, mostrar sólo en detección o no
-                        nftAddTJS.addVideo("arvideo", "godeidos", 100, imgConfig, false);
+                        nftAddTJS.addVideo("arvideo", "godeidos", 200, imgConfig, false);
                         nftAddTJS.add(luz)
                         const tick = () => {
                             sceneThreejs.draw();
